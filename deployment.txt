@@ -1,0 +1,13 @@
+Deployment URL: https://kokoparel.github.io/portoversi2/
+
+Platform: GitHub Pages
+Status: Live ✅
+Last Updated: 26 December 2025
+
+Build Command: None (Static Site)
+Publish Directory: / (root)
+
+Notes:
+- Website is fully responsive
+- Optimized for desktop and mobile
+- No backend required (pure frontend)

@@ -1,138 +1,23 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Farrel Athaillah Wijaya - Front-End Developer crafting premium digital experiences">
+    <meta name="description"
+        content="Farrel Athaillah Wijaya - Front-End Developer crafting premium digital experiences">
     <title>Farrel Athaillah Wijaya - Front-End Developer</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #0a0a0a;
-            color: #ffffff;
-            overflow-x: hidden;
-            /* Sembunyikan kursor asli di desktop agar kursor dot yang terlihat */
-            cursor: none; 
-        }
-
-        /* Tampilkan kembali kursor asli di mobile */
-        @media (max-width: 768px) {
-            body { cursor: auto; }
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .animate-fade-in-up { animation: fadeInUp 1s ease-out forwards; }
-
-        .navbar-blur {
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            background: rgba(10, 10, 10, 0.8);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .hero-title {
-            font-size: clamp(3rem, 8vw, 7rem);
-            font-weight: 800;
-            line-height: 1.1;
-            letter-spacing: -0.02em;
-        }
-
-        .project-card {
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-            background: rgba(20, 20, 20, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .project-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(102, 126, 234, 0.3);
-            background: rgba(30, 30, 30, 0.9);
-        }
-        .project-card:hover .project-image { transform: scale(1.05); }
-        .project-image { transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
-
-        .btn-primary {
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0; left: -100%; width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-            transition: left 0.5s;
-        }
-        .btn-primary:hover::before { left: 100%; }
-
-        .tech-badge {
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .tech-badge:hover {
-            border-color: #667eea;
-            background: rgba(102, 126, 234, 0.1);
-            transform: translateY(-2px);
-        }
-
-        .section-title {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(10px); }
-        }
-        .scroll-indicator { animation: bounce 2s infinite; }
-
-        .grid-bg {
-            background-image: 
-                linear-gradient(rgba(102, 126, 234, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(102, 126, 234, 0.05) 1px, transparent 1px);
-            background-size: 50px 50px;
-        }
-
-        .contact-card {
-            background: rgba(20, 20, 20, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
-        }
-        .contact-card:hover {
-            border-color: rgba(102, 126, 234, 0.3);
-            background: rgba(30, 30, 30, 0.9);
-            transform: translateY(-4px);
-        }
-        
-        /* CSS Tambahan untuk Cursor agar transisi scale halus */
-        .cursor-dot {
-            transition: width 0.3s, height 0.3s, background-color 0.3s, transform 0.1s;
-        }
-    </style>
 </head>
+
 <body>
-    <div class="cursor-dot hidden md:block fixed top-0 left-0 w-4 h-4 bg-[#667eea] rounded-full pointer-events-none z-[9999]" style="transform: translate(-50%, -50%); box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);"></div>
+    <div class="cursor-dot hidden md:block fixed top-0 left-0 w-4 h-4 bg-[#667eea] rounded-full pointer-events-none z-[9999]"
+        style="transform: translate(-50%, -50%); box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);"></div>
 
     <nav class="fixed top-0 w-full z-50 navbar-blur transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 py-6">
@@ -140,7 +25,7 @@
                 <a href="#home" class="text-2xl font-bold" aria-label="Navigate to home">
                     <span class="gradient-text">Farrel</span>
                 </a>
-                
+
                 <ul class="hidden md:flex space-x-12 text-sm font-medium">
                     <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
                     <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
@@ -148,13 +33,16 @@
                     <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
                 </ul>
 
-                <a href="#contact" class="hidden md:block px-6 py-2.5 bg-white text-black text-sm font-semibold rounded-full hover:bg-gray-100 transition">
+                <a href="#contact"
+                    class="hidden md:block px-6 py-2.5 bg-white text-black text-sm font-semibold rounded-full hover:bg-gray-100 transition">
                     Let's Connect
                 </a>
 
-                <button id="mobile-toggle" class="md:hidden text-white" aria-label="Toggle navigation menu" aria-expanded="false">
+                <button id="mobile-toggle" class="md:hidden text-white" aria-label="Toggle navigation menu"
+                    aria-expanded="false">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
@@ -170,24 +58,28 @@
 
     <section id="home" class="min-h-screen flex items-center justify-center px-6 pt-32 pb-20 grid-bg relative">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50"></div>
-        
+
         <div class="max-w-6xl mx-auto text-center relative z-10">
             <div class="animate-fade-in-up opacity-0">
-                <p class="text-gray-400 text-sm md:text-base mb-6 font-medium tracking-wider uppercase">Front-End Developer</p>
+                <p class="text-gray-400 text-sm md:text-base mb-6 font-medium tracking-wider uppercase">Front-End
+                    Developer</p>
                 <h1 class="hero-title mb-8">
                     <span class="block">Crafted</span>
                     <span class="block gradient-text">Experiences</span>
                     <span class="block">That Convert</span>
                 </h1>
                 <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
-                    Premium digital experiences designed to captivate and deliver results. Mahasiswa Informatika @ Universitas Sriwijaya.
+                    Premium digital experiences designed to captivate and deliver results. Mahasiswa Informatika @
+                    Universitas Sriwijaya.
                 </p>
-                
+
                 <div class="flex gap-6 justify-center flex-wrap">
-                    <a href="#work" class="btn-primary px-8 py-4 bg-white text-black text-sm font-semibold rounded-full hover:bg-gray-100 transition">
+                    <a href="#work"
+                        class="btn-primary px-8 py-4 bg-white text-black text-sm font-semibold rounded-full hover:bg-gray-100 transition">
                         View My Work
                     </a>
-                    <a href="#contact" class="px-8 py-4 border border-white/20 text-white text-sm font-semibold rounded-full hover:bg-white/10 transition">
+                    <a href="#contact"
+                        class="px-8 py-4 border border-white/20 text-white text-sm font-semibold rounded-full hover:bg-white/10 transition">
                         Get In Touch
                     </a>
                 </div>
@@ -195,7 +87,8 @@
 
             <div class="scroll-indicator mt-24">
                 <svg class="w-6 h-6 mx-auto text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                 </svg>
             </div>
         </div>
@@ -206,16 +99,18 @@
             <div class="grid md:grid-cols-2 gap-16 items-start">
                 <div>
                     <h2 class="section-title mb-8">
-                        Design that speaks.<br/>
+                        Design that speaks.<br />
                         <span class="gradient-text">Code that performs.</span>
                     </h2>
                     <p class="text-gray-400 text-lg leading-relaxed mb-6">
-                        Saya adalah mahasiswa Informatika di Universitas Sriwijaya yang fokus menciptakan pengalaman web yang tidak hanya menarik secara visual, tetapi juga fungsional dan performa tinggi.
+                        Saya adalah mahasiswa Informatika di Universitas Sriwijaya yang fokus menciptakan pengalaman web
+                        yang tidak hanya menarik secara visual, tetapi juga fungsional dan performa tinggi.
                     </p>
                     <p class="text-gray-400 text-lg leading-relaxed mb-12">
-                        Dengan kombinasi design thinking dan technical expertise, saya membangun produk digital yang resonan dengan users dan mencapai business goals.
+                        Dengan kombinasi design thinking dan technical expertise, saya membangun produk digital yang
+                        resonan dengan users dan mencapai business goals.
                     </p>
-                    
+
                     <div class="grid grid-cols-2 gap-8 mb-12">
                         <div>
                             <p class="text-5xl font-bold gradient-text mb-2">15+</p>
@@ -260,9 +155,12 @@
                     <div class="mt-12">
                         <h3 class="text-xl font-semibold mb-6 text-gray-300">Currently Learning</h3>
                         <div class="flex flex-wrap gap-3">
-                            <span class="px-4 py-2 rounded-full bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 text-sm font-medium">Next.js</span>
-                            <span class="px-4 py-2 rounded-full bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 text-sm font-medium">TypeScript</span>
-                            <span class="px-4 py-2 rounded-full bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 text-sm font-medium">Three.js</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 text-sm font-medium">Next.js</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 text-sm font-medium">TypeScript</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 text-sm font-medium">Three.js</span>
                         </div>
                     </div>
                 </div>
@@ -277,257 +175,258 @@
                     Featured <span class="gradient-text">Work</span>
                 </h2>
                 <p class="text-gray-400 text-lg max-w-2xl mx-auto">
-                    Beberapa project pilihan yang mencerminkan passion dan dedikasi saya dalam crafting digital experiences.
+                    Beberapa project pilihan yang mencerminkan passion dan dedikasi saya dalam crafting digital
+                    experiences.
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="project-card rounded-2xl overflow-hidden group">
-                    <div class="h-64 bg-gradient-to-br from-blue-600 to-purple-700 relative overflow-hidden">
-                        <div class="project-image absolute inset-0 flex items-center justify-center text-8xl">bla</div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-3">
-                            <h3 class="text-xl font-bold text-white">bla vla</h3>
-                            <span class="text-gray-500 text-xs uppercase tracking-wider">2024</span>
+            <div class="carousel-container">
+                <button class="carousel-btn prev" aria-label="Previous projects">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                        </path>
+                    </svg>
+                </button>
+
+                <div class="carousel-wrapper">
+                    <div class="carousel-track">
+                        <!-- Project 1 -->
+                        <div class="carousel-slide">
+                            <div class="project-card rounded-2xl overflow-hidden group">
+                                <div
+                                    class="h-64 bg-gradient-to-br from-blue-600 to-purple-700 relative overflow-hidden">
+                                    <div
+                                        class="project-image absolute inset-0 flex items-center justify-center text-8xl">
+                                        💼</div>
+                                </div>
+                                <div class="p-6">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <h3 class="text-xl font-bold text-white">Project One</h3>
+                                        <span class="text-gray-500 text-xs uppercase tracking-wider">2024</span>
+                                    </div>
+                                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                                        Project description here.
+                                    </p>
+                                    <div class="flex gap-2 mb-4 flex-wrap">
+                                        <span
+                                            class="text-xs px-3 py-1 rounded-full bg-white/5 text-gray-400 border border-white/10">React</span>
+                                        <span
+                                            class="text-xs px-3 py-1 rounded-full bg-white/5 text-gray-400 border border-white/10">Tailwind</span>
+                                    </div>
+                                    <button
+                                        class="text-sm text-gray-500 font-medium opacity-50 cursor-not-allowed">Coming
+                                        Soon →</button>
+                                </div>
+                            </div>
                         </div>
-                        <p class="text-gray-400 text-sm mb-4 leading-relaxed">
-                            bla bla.
-                        </p>
-                        <div class="flex gap-2 mb-4 flex-wrap">
-                            <span class="text-xs px-3 py-1 rounded-full bg-white/5 text-gray-400 border border-white/10">React</span>
-                            <span class="text-xs px-3 py-1 rounded-full bg-white/5 text-gray-400 border border-white/10">Tailwind</span>
+
+                        <!-- Project 2 -->
+                        <div class="carousel-slide">
+                            <div class="project-card rounded-2xl overflow-hidden group">
+                                <div class="h-64 bg-gradient-to-br from-green-600 to-teal-700 relative overflow-hidden">
+                                    <div
+                                        class="project-image absolute inset-0 flex items-center justify-center text-8xl">
+                                        🚀</div>
+                                </div>
+                                <div class="p-6">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <h3 class="text-xl font-bold text-white">Project Two</h3>
+                                        <span class="text-gray-500 text-xs uppercase tracking-wider">2024</span>
+                                    </div>
+                                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                                        Project description here.
+                                    </p>
+                                    <div class="flex gap-2 mb-4 flex-wrap">
+                                        <span
+                                            class="text-xs px-3 py-1 rounded-full bg-white/5 text-gray-400 border border-white/10">JavaScript</span>
+                                        <span
+                                            class="text-xs px-3 py-1 rounded-full bg-white/5 text-gray-400 border border-white/10">CSS</span>
+                                    </div>
+                                    <button
+                                        class="text-sm text-gray-500 font-medium opacity-50 cursor-not-allowed">Coming
+                                        Soon →</button>
+                                </div>
+                            </div>
                         </div>
-                        <button class="text-sm text-gray-500 font-medium opacity-50 cursor-allowed">Coming Soon →</button>
+
+                        <!-- Project 3 -->
+                        <div class="carousel-slide">
+                            <div class="project-card rounded-2xl overflow-hidden group">
+                                <div class="h-64 bg-gradient-to-br from-orange-600 to-red-700 relative overflow-hidden">
+                                    <div
+                                        class="project-image absolute inset-0 flex items-center justify-center text-8xl">
+                                        🎨</div>
+                                </div>
+                                <div class="p-6">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <h3 class="text-xl font-bold text-white">Project Three</h3>
+                                        <span class="text-gray-500 text-xs uppercase tracking-wider">2024</span>
+                                    </div>
+                                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                                        Project description here.
+                                    </p>
+                                    <div class="flex gap-2 mb-4 flex-wrap">
+                                        <span
+                                            class="text-xs px-3 py-1 rounded-full bg-white/5 text-gray-400 border border-white/10">Vue.js</span>
+                                        <span
+                                            class="text-xs px-3 py-1 rounded-full bg-white/5 text-gray-400 border border-white/10">Tailwind</span>
+                                    </div>
+                                    <button
+                                        class="text-sm text-gray-500 font-medium opacity-50 cursor-not-allowed">Coming
+                                        Soon →</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 4 -->
+                        <div class="carousel-slide">
+                            <div class="project-card rounded-2xl overflow-hidden group">
+                                <div
+                                    class="h-64 bg-gradient-to-br from-pink-600 to-purple-700 relative overflow-hidden">
+                                    <div
+                                        class="project-image absolute inset-0 flex items-center justify-center text-8xl">
+                                        ⚡</div>
+                                </div>
+                                <div class="p-6">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <h3 class="text-xl font-bold text-white">Project Four</h3>
+                                        <span class="text-gray-500 text-xs uppercase tracking-wider">2024</span>
+                                    </div>
+                                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                                        Project description here.
+                                    </p>
+                                    <div class="flex gap-2 mb-4 flex-wrap">
+                                        <span
+                                            class="text-xs px-3 py-1 rounded-full bg-white/5 text-gray-400 border border-white/10">Next.js</span>
+                                        <span
+                                            class="text-xs px-3 py-1 rounded-full bg-white/5 text-gray-400 border border-white/10">TypeScript</span>
+                                    </div>
+                                    <button
+                                        class="text-sm text-gray-500 font-medium opacity-50 cursor-not-allowed">Coming
+                                        Soon →</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 5 - BARU -->
+                        <div class="carousel-slide">
+                            <div class="project-card rounded-2xl overflow-hidden group">
+                                <div class="h-64 bg-gradient-to-br from-cyan-600 to-blue-700 relative overflow-hidden">
+                                    <div
+                                        class="project-image absolute inset-0 flex items-center justify-center text-8xl">
+                                        🎯</div>
+                                </div>
+                                <div class="p-6">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <h3 class="text-xl font-bold text-white">Project Five</h3>
+                                        <span class="text-gray-500 text-xs uppercase tracking-wider">2024</span>
+                                    </div>
+                                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                                        Project description here.
+                                    </p>
+                                    <div class="flex gap-2 mb-4 flex-wrap">
+                                        <span
+                                            class="text-xs px-3 py-1 rounded-full bg-white/5 text-gray-400 border border-white/10">HTML</span>
+                                        <span
+                                            class="text-xs px-3 py-1 rounded-full bg-white/5 text-gray-400 border border-white/10">CSS</span>
+                                    </div>
+                                    <button
+                                        class="text-sm text-gray-500 font-medium opacity-50 cursor-not-allowed">Coming
+                                        Soon →</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 5 - BARU -->
+                        <div class="carousel-slide">
+                            <div class="project-card rounded-2xl overflow-hidden group">
+                                <div class="h-64 bg-gradient-to-br from-cyan-600 to-blue-700 relative overflow-hidden">
+                                    <div class="project-image absolute inset-0 flex items-center justify-center text-8xl">🎯</div>
+                                </div>
+                                <div class="p-6">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <h3 class="text-xl font-bold text-white">Project Six</h3>
+                                        <span class="text-gray-500 text-xs uppercase tracking-wider">2024</span>
+                                    </div>
+                                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                                        Project description here.
+                                    </p>
+                                    <div class="flex gap-2 mb-4 flex-wrap">
+                                        <span class="text-xs px-3 py-1 rounded-full bg-white/5 text-gray-400 border border-white/10">HTML</span>
+                                        <span class="text-xs px-3 py-1 rounded-full bg-white/5 text-gray-400 border border-white/10">CSS</span>
+                                    </div>
+                                    <button class="text-sm text-gray-500 font-medium opacity-50 cursor-not-allowed">Coming Soon →</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card rounded-2xl overflow-hidden group">
-                    <div class="h-64 bg-gradient-to-br from-green-600 to-teal-700 relative overflow-hidden">
-                        <div class="project-image absolute inset-0 flex items-center justify-center text-8xl">bla</div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-3">
-                            <h3 class="text-xl font-bold text-white">bla</h3>
-                            <span class="text-gray-500 text-xs uppercase tracking-wider">2024</span>
-                        </div>
-                        <p class="text-gray-400 text-sm mb-4 leading-relaxed">
-                            bla bla.
-                        </p>
-                        <div class="flex gap-2 mb-4 flex-wrap">
-                            <span class="text-xs px-3 py-1 rounded-full bg-white/5 text-gray-400 border border-white/10">JavaScript</span>
-                            <span class="text-xs px-3 py-1 rounded-full bg-white/5 text-gray-400 border border-white/10">LocalStorage</span>
-                        </div>
-                        <button class="text-sm text-gray-500 font-medium opacity-50 cursor-not-allowed">Coming Soon →</button>
-                    </div>
-                </div>
-
-                <div class="project-card rounded-2xl overflow-hidden group">
-                    <div class="h-64 bg-gradient-to-br from-orange-600 to-red-700 relative overflow-hidden">
-                        <div class="project-image absolute inset-0 flex items-center justify-center text-8xl">🎨</div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-3">
-                            <h3 class="text-xl font-bold text-white">bla</h3>
-                            <span class="text-gray-500 text-xs uppercase tracking-wider">2024</span>
-                        </div>
-                        <p class="text-gray-400 text-sm mb-4 leading-relaxed">
-                            bla bla.
-                        </p>
-                        <div class="flex gap-2 mb-4 flex-wrap">
-                            <span class="text-xs px-3 py-1 rounded-full bg-white/5 text-gray-400 border border-white/10">Vue.js</span>
-                            <span class="text-xs px-3 py-1 rounded-full bg-white/5 text-gray-400 border border-white/10">Tailwind</span>
-                        </div>
-                        <button class="text-sm text-gray-500 font-medium opacity-50 cursor-not-allowed">Coming Soon →</button>
-                    </div>
-                </div>
+                <button class="carousel-btn next" aria-label="Next projects">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
             </div>
+
+            <div class="carousel-dots"></div>
         </div>
     </section>
 
     <section id="contact" class="py-32 px-6 bg-gradient-to-b from-black to-gray-900">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="section-title mb-6">
-                Let's Create<br/>
+                Let's Create<br />
                 <span class="gradient-text">Something Great</span>
             </h2>
             <p class="text-gray-400 text-lg mb-16 max-w-2xl mx-auto leading-relaxed">
-                Saya terbuka untuk opportunities, kolaborasi project, atau sekadar diskusi tentang tech dan design. Let's connect!
+                Saya terbuka untuk opportunities, kolaborasi project, atau sekadar diskusi tentang tech dan design.
+                Let's connect!
             </p>
 
             <div class="grid md:grid-cols-3 gap-6 mb-16">
                 <div class="contact-card p-8 rounded-2xl">
-                    <div class="w-14 h-14 bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <div
+                        class="w-14 h-14 bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-6">
                         <svg class="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
                         </svg>
                     </div>
                     <h3 class="text-lg font-semibold mb-2">Email</h3>
-                    <a href="mailto:farrelathaillah@gmail.com" class="text-gray-400 text-sm hover:text-purple-400 transition">farrelathaillah@gmail.com</a>
+                    <a href="mailto:farrel.pepen@gmail.com"
+                        class="text-gray-400 text-sm hover:text-purple-400 transition">farrel.pepen@gmail.com</a>
                 </div>
 
                 <div class="contact-card p-8 rounded-2xl">
-                    <div class="w-14 h-14 bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-7 h-7 text-purple-400" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    <div
+                        class="w-14 h-14 bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-7 h-7 text-purple-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
                     </div>
                     <h3 class="text-lg font-semibold mb-2">LinkedIn</h3>
-                    <a href="https://linkedin.com/in/farrelaw" target="_blank" rel="noopener noreferrer" class="text-gray-400 text-sm hover:text-purple-400 transition">/farrelathaillah</a>
+                    <a href="https://linkedin.com/in/farrelaw" target="_blank" rel="noopener noreferrer"
+                        class="text-gray-400 text-sm hover:text-purple-400 transition">Farrel AW</a>
                 </div>
 
                 <div class="contact-card p-8 rounded-2xl">
-                    <div class="w-14 h-14 bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-7 h-7 text-purple-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    <div
+                        class="w-14 h-14 bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-7 h-7 text-purple-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
                     </div>
                     <h3 class="text-lg font-semibold mb-2">GitHub</h3>
-                    <a href="https://github.com/farrelathaillah" target="_blank" rel="noopener noreferrer" class="text-gray-400 text-sm hover:text-purple-400 transition">/farrelathaillah</a>
+                    <a href="https://github.com/kokoparel" target="_blank" rel="noopener noreferrer"
+                        class="text-gray-400 text-sm hover:text-purple-400 transition">Kokoparel</a>
                 </div>
-            </div>
-
-            <a href="mailto:farrelathaillah@gmail.com" class="inline-block btn-primary px-10 py-4 bg-white text-black text-base font-semibold rounded-full hover:bg-gray-100 transition">
-                Send Me a Message
-            </a>
-        </div>
     </section>
 
-    <script>
-        // ==========================================
-        // CURSOR EFFECT (FIXED)
-        // ==========================================
-        const CursorEffect = (() => {
-            const cursor = document.querySelector('.cursor-dot');
-            
-            const init = () => {
-                if (!cursor) return;
-                
-                // Pindahkan cursor mengikuti mouse
-                document.addEventListener('mousemove', (e) => {
-                    cursor.style.left = e.clientX + 'px';
-                    cursor.style.top = e.clientY + 'px';
-                });
-
-                // Efek Hover Membesar
-                // PENTING: Kita harus tetap menyertakan 'translate(-50%, -50%)'
-                // supaya cursor tidak loncat ke samping saat membesar.
-                document.querySelectorAll('a, button, .project-card').forEach(el => {
-                    el.addEventListener('mouseenter', () => {
-                        cursor.style.transform = 'translate(-50%, -50%) scale(2.5)';
-                        cursor.style.backgroundColor = 'white'; // Ganti warna saat hover (opsional)
-                        cursor.style.mixBlendMode = 'difference'; // Efek keren (opsional)
-                    });
-                    
-                    el.addEventListener('mouseleave', () => {
-                        cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-                        cursor.style.backgroundColor = '#667eea'; // Balik ke warna ungu
-                        cursor.style.mixBlendMode = 'normal';
-                    });
-                });
-            };
-
-            return { init };
-        })();
-
-        // ==========================================
-        // MOBILE MENU TOGGLE
-        // ==========================================
-        const MobileMenu = (() => {
-            const toggle = document.getElementById('mobile-toggle');
-            const menu = document.getElementById('mobile-menu');
-            
-            const init = () => {
-                if (!toggle || !menu) return;
-                
-                toggle.addEventListener('click', () => {
-                    menu.classList.toggle('hidden');
-                });
-
-                menu.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        menu.classList.add('hidden');
-                    });
-                });
-            };
-
-            return { init };
-        })();
-
-        // ==========================================
-        // SCROLL ANIMATIONS
-        // ==========================================
-        const ScrollAnimations = (() => {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -100px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, observerOptions);
-
-            const init = () => {
-                const projectCards = document.querySelectorAll('.project-card');
-                projectCards.forEach(card => observer.observe(card));
-            };
-
-            return { init };
-        })();
-
-        // ==========================================
-        // NAVBAR BACKGROUND ON SCROLL
-        // ==========================================
-        const NavbarScroll = (() => {
-            const navbar = document.querySelector('nav');
-            
-            const init = () => {
-                if (!navbar) return;
-                
-                window.addEventListener('scroll', () => {
-                    if (window.scrollY > 50) {
-                        navbar.style.background = 'rgba(10, 10, 10, 0.95)';
-                    } else {
-                        navbar.style.background = 'rgba(10, 10, 10, 0.8)';
-                    }
-                });
-            };
-
-            return { init };
-        })();
-
-        // ==========================================
-        // SMOOTH SCROLL FOR ANCHOR LINKS
-        // ==========================================
-        const SmoothScroll = (() => {
-            const init = () => {
-                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                    anchor.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        const target = document.querySelector(this.getAttribute('href'));
-                        if (target) {
-                            target.scrollIntoView({
-                                behavior: 'smooth',
-                                block: 'start'
-                            });
-                        }
-                    });
-                });
-            };
-
-            return { init };
-        })();
-
-        // ==========================================
-        // INITIALIZE ALL
-        // ==========================================
-        document.addEventListener('DOMContentLoaded', () => {
-            CursorEffect.init();
-            MobileMenu.init();
-            ScrollAnimations.init();
-            NavbarScroll.init();
-            SmoothScroll.init();
-        });
-    </script>
+ 
+    <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,18 @@
+GitHub Repository URL: https://github.com/Kokoparel/portoversi2
+
+Repository Name: portoversi2
+Author: Farrel Athaillah Wijaya
+Created: December 2025
+
+Technologies Used:
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Tailwind CSS
+
+Features:
+- Responsive Design
+- Interactive Carousel
+- Custom Cursor Effect
+- Smooth Animations
+- Mobile-Friendly Navigation
