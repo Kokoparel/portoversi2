@@ -126,4 +126,3 @@ cd portofolio-farrel
 ---
 
 **⭐ If you like this project, please give it a star on GitHub!**
-```
